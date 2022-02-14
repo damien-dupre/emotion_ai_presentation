@@ -13,24 +13,20 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 params:
-  eval_rights: FALSE
+  eval_rights: TRUE
 ---
 
 ```{r setup, include = FALSE}
 # libraries --------------------------------------------------------------------
-library(tidyverse)
+library(emo)
+library(fontawesome)
+library(here)
+library(htmltools)
+library(janitor)
 library(knitr)
 library(nomnoml)
-library(here)
-library(janitor)
-library(mgcv)
-library(gratia)
-library(htmltools)
-library(plotly)
-library(zoo)
-library(dygraphs)
-library(tweetrmd)
-library(fontawesome)
+library(tidyverse)
+#library(tweetrmd)
 
 # general options --------------------------------------------------------------
 options(scipen = 999)
@@ -100,7 +96,7 @@ The emotional experience determines our perceptions and leads our decisions:
 ```{r out.width='60%'}
 include_graphics("media/phineas_gage.jpg")
 ```
-.center.tiny[Modeling the path of the tamping iron through the Gage skull and its effects on white matter structure.<br />Credit: Van Horn, Irimia, Torgerson, Chambers, Kikinis & Toga (2012) [`r emo::ji("link")`](https://doi.org/10.1371/journal.pone.0037454)]
+.center.tiny[Modeling the path of the tamping iron through the Gage skull and its effects on white matter structure.<br />Credit: Van Horn, Irimia, Torgerson, Chambers, Kikinis & Toga (2012) [`r ji("link")`](https://doi.org/10.1371/journal.pone.0037454)]
 
 ---
 
@@ -118,7 +114,7 @@ tags$video(
   style = "display:block; margin: 0 auto;"
   )
 ```
-.center.tiny[K-fee commercial. Credit: Cobblestone Filmproduktion (2004) [`r emo::ji("link")`](https://www.youtube.com/watch?v=sA_wUTLhSAU)]
+.center.tiny[K-fee commercial. Credit: Cobblestone Filmproduktion (2004) [`r ji("link")`](https://www.youtube.com/watch?v=sA_wUTLhSAU)]
 
 ---
 
@@ -153,7 +149,7 @@ include_graphics("media/emo_intensity.png")
 include_graphics("media/emo_rapidity.png")
 ```
 
-.center.tiny[Adapted from Scherer (2005) [`r emo::ji("link")`](https://doi.org/10.1177/0539018405058216)]
+.center.tiny[Adapted from Scherer (2005) [`r ji("link")`](https://doi.org/10.1177/0539018405058216)]
 
 ]
 
@@ -210,7 +206,7 @@ Affective states refer to **"valenced (good versus bad) states"** ([Gross, 2010,
 [Affective States]->[Moods]
 ```
 
-.center.tiny[There are many types of affective states, including attitudes, moods, and emotions.<br />Adapted from Gross (2010) [`r emo::ji("link")`](https://doi.org/10.1177/1754073910361982)]
+.center.tiny[There are many types of affective states, including attitudes, moods, and emotions.<br />Adapted from Gross (2010) [`r ji("link")`](https://doi.org/10.1177/1754073910361982)]
 
 ---
 
@@ -223,7 +219,7 @@ Affective states refer to **"valenced (good versus bad) states"** ([Gross, 2010,
 ```{r out.width='80%'}
 include_graphics("media/inside_out.gif")
 ```
-.center.tiny[Inside Out. Credit: Pixar Animation Studios (2015) [`r emo::ji("link")`](https://i.imgur.com/ifdEAOx.gif)]
+.center.tiny[Inside Out. Credit: Pixar Animation Studios (2015) [`r ji("link")`](https://i.imgur.com/ifdEAOx.gif)]
 
 ---
 
@@ -255,7 +251,7 @@ Emotions have 5 functions each corresponding to a specific component/subsystem:
 [<abstract>Trigger Event]--:>[Emotion]
 ```
 
-.center.tiny[The dynamic architecture of the component process model.<br />Adapted from Scherer (2009) [`r emo::ji("link")`](https://doi.org/10.1080/02699930902928969)]
+.center.tiny[The dynamic architecture of the component process model.<br />Adapted from Scherer (2009) [`r ji("link")`](https://doi.org/10.1080/02699930902928969)]
 
 ---
 
@@ -276,18 +272,13 @@ In parallel, multiple tools and databases have been developed to investigate emo
 ```{r out.width='80%'}
 include_graphics("media/rise_affective_computing.png")
 ```
-.center.tiny[Credit: The Guardian (2019) [`r emo::ji("link")`](https://www.theguardian.com/technology/2019/mar/06/facial-recognition-software-emotional-science)]
+.center.tiny[Credit: The Guardian (2019) [`r ji("link")`](https://www.theguardian.com/technology/2019/mar/06/facial-recognition-software-emotional-science)]
 ]
 
 ---
 class: inverse, mline, center, middle
 
-# 2. Emotion Recognition from Facial Expressions and Physiological Changes
-
----
-class: title-slide, middle
-
-## 2.1 Measuring Emotions from Facial Expression
+# 2. Emotion Recognition from Facial Expressions
 
 ---
 
@@ -301,7 +292,7 @@ class: title-slide, middle
 ```{r out.width='75%'}
 include_graphics("media/affectiva.jpg")
 ```
-.center.tiny[Credit: Affectiva [`r emo::ji("link")`](https://www.affectiva.com/news-item/affectiva-launches-multi-modal-automotive-in-cabin-ai-to-improve-road-safety-and-accelerate-autonomy-2/)]
+.center.tiny[Credit: Affectiva [`r ji("link")`](https://www.affectiva.com/news-item/affectiva-launches-multi-modal-automotive-in-cabin-ai-to-improve-road-safety-and-accelerate-autonomy-2/)]
 
 ---
 
@@ -328,7 +319,7 @@ Result is a recognition probability for a labelled category (e.g., Action Unit, 
 ```{r out.width='70%'}
 include_graphics("media/automatic_steps.png")
 ```
-.center.tiny[Credit: Dupré, Andelic, Morrison & McKeown (2018) [`r emo::ji("link")`](https://doi.org/10.1109/PERCOMW.2018.8480127)]
+.center.tiny[Credit: Dupré, Andelic, Morrison & McKeown (2018) [`r ji("link")`](https://doi.org/10.1109/PERCOMW.2018.8480127)]
 ]
 
 ---
@@ -343,7 +334,7 @@ Emotion categories/dimensions are inferred from facial expressions either:
 ```{r out.width='85%'}
 include_graphics("media/emfacs_example.jpg")
 ```
-.center.tiny[Credit: Bartlett, Littlewort, Frank, Lainscsek, Fasel, & Movellan (2006) [`r emo::ji("link")`](https://www.doi.org/10.1109/FGR.2006.55)]
+.center.tiny[Credit: Bartlett, Littlewort, Frank, Lainscsek, Fasel, & Movellan (2006) [`r ji("link")`](https://www.doi.org/10.1109/FGR.2006.55)]
 
 ]
 
@@ -353,23 +344,23 @@ include_graphics("media/emfacs_example.jpg")
 ```{r out.width='42%'}
 include_graphics("media/affdex_example.jpg")
 ```
-.center.tiny[Credit: ThinkApps [`r emo::ji("link")`](http://thinkapps.com/blog/development/machine-intelligence-affectiva-interview/)]
+.center.tiny[Credit: ThinkApps [`r ji("link")`](http://thinkapps.com/blog/development/machine-intelligence-affectiva-interview/)]
 
 ]
 
 ```{r}
 data_expression <- "data/automatic_recognition_data.csv" %>% 
-  here::here() %>% 
-  readr::read_csv() %>% 
-  janitor::clean_names() %>% 
-  dplyr::select(source, time_stamp, joy, fear, disgust, sadness, anger, surprise) %>% 
-  tidyr::pivot_longer(
+  here() %>% 
+  read_csv() %>% 
+  clean_names() %>% 
+  select(source, time_stamp, joy, fear, disgust, sadness, anger, surprise) %>% 
+  pivot_longer(
     cols = joy:surprise, 
     names_to = "emotion_recognized", 
     values_to = "value"
   ) %>% 
-  tidyr::separate(source, c("emotion_expressed", "gender"), sep = "[.]") %>% 
-  dplyr::mutate(type = case_when(
+  separate(source, c("emotion_expressed", "gender"), sep = "[.]") %>% 
+  mutate(type = case_when(
     emotion_recognized == emotion_expressed ~ "target",
     TRUE ~ "non-target"
   )) 
@@ -382,15 +373,15 @@ data_expression <- "data/automatic_recognition_data.csv" %>%
 Four video clips expressed by males were taken from the [DynEmo database](https://dynemo.univ-grenoble-alpes.fr/?lang=en) and judged by human observers as expressing happiness, surprise, fear and disgust:
 
 ```{r, eval=params$eval_rights, fig.show="hold", out.width='25%', fig.align="default"}
-include_graphics("../../../Media/dynemo_disgust_m.gif")
-include_graphics("../../../Media/dynemo_fear_m.gif")
-include_graphics("../../../Media/dynemo_happiness_m.gif")
-include_graphics("../../../Media/dynemo_surprise_m.gif")
+include_graphics("../../../Media/emotions/dynemo_disgust_m.gif")
+include_graphics("../../../Media/emotions/dynemo_fear_m.gif")
+include_graphics("../../../Media/emotions/dynemo_happiness_m.gif")
+include_graphics("../../../Media/emotions/dynemo_surprise_m.gif")
 ```
 
 ```{r, fig.width=11, fig.height=3}
-plot <- data_expression %>%
-  dplyr::filter(gender == "M") %>% 
+data_expression %>%
+  filter(gender == "M") %>% 
   ggplot(aes(time_stamp, value, color = emotion_recognized)) + 
   geom_line(size = 2) +
   scale_x_continuous("") +
@@ -398,9 +389,6 @@ plot <- data_expression %>%
   scale_color_discrete("Emotion Recognized") +
   facet_grid(gender ~ emotion_expressed) + 
   theme(legend.position = "bottom")
-
-plotly::ggplotly(plot) %>%
-  layout(legend = list(orientation = "h", x = 0.4, y = -0.2))
 ```
 
 .center.tiny[Expression of Disgust correctly recognized, the others led to subtle or incorrect recognition.]
@@ -412,15 +400,15 @@ plotly::ggplotly(plot) %>%
 Four video clips expressed by females were taken from the [DynEmo database](https://dynemo.univ-grenoble-alpes.fr/?lang=en) and judged by human observers as expressing happiness, surprise, fear and disgust:
 
 ```{r, eval=params$eval_rights, fig.show="hold", out.width='25%', fig.align="default"}
-include_graphics("../../../Media/dynemo_disgust_f.gif")
-include_graphics("../../../Media/dynemo_fear_f.gif")
-include_graphics("../../../Media/dynemo_happiness_f.gif")
-include_graphics("../../../Media/dynemo_surprise_f.gif")
+include_graphics("../../../Media/emotions/dynemo_disgust_f.gif")
+include_graphics("../../../Media/emotions/dynemo_fear_f.gif")
+include_graphics("../../../Media/emotions/dynemo_happiness_f.gif")
+include_graphics("../../../Media/emotions/dynemo_surprise_f.gif")
 ```
 
 ```{r, fig.width=11, fig.height=3}
-plot <- data_expression %>%
-  dplyr::filter(gender == "F") %>% 
+data_expression %>%
+  filter(gender == "F") %>% 
   ggplot(aes(time_stamp, value, color = emotion_recognized)) + 
   geom_line(size = 2) +
   scale_x_continuous("") +
@@ -428,172 +416,9 @@ plot <- data_expression %>%
   scale_color_discrete("Emotion Recognized") +
   facet_grid(gender ~ emotion_expressed) + 
   theme(legend.position = "bottom")
-
-plotly::ggplotly(plot) %>%
-  layout(legend = list(orientation = "h", x = 0.4, y = -0.2))
 ```
 
 .center.tiny[All four expressions are partially correctly recognized but some non relevant emotions are also recognized.]
-
----
-class: title-slide, middle
-
-## 2.2 Measuring Emotions from Physiological Changes
-
----
-
-# Physiology and Emotions
-
-Emotions modulate and influence physiological rhythms ([Kreibig, Samson, & Gross, 2013](https://doi.org/10.1111/psyp.12064)):
-
-```{r out.width='70%'}
-include_graphics("media/physio.png")
-```
-.center.tiny[Conceptual representation of the relationship between physiological rythms and emotions.]
-
----
-
-# Current Methods
-
-Possible measurements include:
-
-* Heart Rate and Heart Rate Variability (with ECG, PPG, ...)
-* Breathing Rate (with mechanical belt, thermal camera, wifi, ...)
-* Skin Temperature (with wearable thermometer, thermal/infrared camera, laser, ...)
-* Sudation (with EDA also called GSR)
-
---
-
-![:col_header Wired Sensors, Wearable Sensors, Remote Sensors]
-![:col_row 
-```{r out.width='100%'}
-include_graphics("media/sensors_wired.jpg")
-```
-<a href="https://doi.org/10.1109/T-AFFC.2011.15"> Credit: Koelstra et al. (2011) `r emo::ji("link")`</a>
-,
-```{r out.width='100%'}
-include_graphics("media/sensors_wearable.jpg")
-```
-<a href="https://www.adinstruments.com/partners/equivital"> Credit: ADinstruments & Equivital `r emo::ji("link")`</a>
-,
-```{r out.width='100%'}
-include_graphics("media/sensors_remote.png")
-```
-<a href="https://www.cu-bx.com/"> Credit: ContinUse Biometrics `r emo::ji("link")`</a>
-]
-![:col_list Multiple Wired Sensors, Watches / Wristbands / Belts / Smart Devices / ..., RGB Camera / Thermal Camera / Laser / Wifi / ...]
-![:col_list Gold Standard, Lower Accuracy but Competitive, Still in Development]
-![:col_list Restricted to Lab. Settings, Measures "in the wild", Long Distance (e.g. through walls)]
-
----
-
-# Emotion Dimensions from Physiology
-
-By identifying the common changes between simultaneous physiological rhythms, it is possible to reveal the underlying contribution of emotions in term of Activation/Arousal and Valence/Pleasure
-
-```{r}
-# data -------------------------------------------------------------------------
-data_HR_sim <- here("data/data_HR_sim.csv") %>% read_csv()
-data_BR_sim <- here("data/data_BR_sim.csv") %>% read_csv()
-data_ST_sim <- here("data/data_ST_sim.csv") %>% read_csv()
-data_EDA_sim <- here("data/data_EDA_sim.csv") %>% read_csv()
-
-# prepare HR, BR and ST time-series --------------------------------------------
-data_HR <- data_HR_sim %>%
-  rename(value = Heartrate) %>%
-  mutate(
-    measure = "HR",
-    time_date = as.POSIXct(time/1000, origin = "1970-01-01", tz = "Europe/London")
-  )
-
-data_BR <- data_BR_sim %>%
-  rename(value = Breathing.Rate) %>%
-  mutate(
-    measure = "BR",
-    time_date = as.POSIXct(time/1000, origin = "1970-01-01", tz = "Europe/London")
-  )
-
-data_ST <- data_ST_sim %>%
-  rename(value = Skin.Temperature) %>%
-  mutate(
-    measure = "ST",
-    time_date = as.POSIXct(time/1000, origin = "1970-01-01", tz = "Europe/London")
-  )
-
-# prepare EDA time-series ------------------------------------------------------
-data_EDA <- data_EDA_sim %>%
-  rename(value = EDA_100Microsimens) %>%
-  mutate(
-    measure = "EDA",
-    time_date = as.POSIXct(time/1000, origin = "1970-01-01", tz = "Europe/London")
-  )
-
-# extract features from EDA ----------------------------------------------------
-data_zoo <- loess(value ~ time, data = data_EDA, span = 0.35)
-data_EDA$SCL <- data_zoo$fitted
-data_EDA$SCR <- data_zoo$residuals
-
-# center scale -----------------------------------------------------------------
-data_HR_zoo <- zoo(data_HR$value, order.by = data_HR$time_date) %>% 
-  scale(center = TRUE, scale = TRUE)
-data_BR_zoo <- zoo(data_BR$value, order.by = data_BR$time_date) %>% 
-  scale(center = TRUE, scale = TRUE)
-data_ST_zoo <- zoo(data_ST$value, order.by = data_ST$time_date) %>% 
-  scale(center = TRUE, scale = TRUE)
-data_SCL_zoo <- zoo(data_EDA$SCL, order.by = data_EDA$time_date) %>% 
-  scale(center = TRUE, scale = TRUE)
-
-# merge and fill ---------------------------------------------------------------
-data_physio <- zoo::merge.zoo(
-    HR = data_HR_zoo, 
-    BR = data_BR_zoo, 
-    ST = data_ST_zoo, 
-    SCL = data_SCL_zoo
-  ) %>%
-  na.approx()
-```
-
-```{r, fig.width=11, fig.height=3}
-dygraph(data_physio) %>%
-  dyRangeSelector() %>%
-  dyOptions(colors = c("red", "blue", "orange", "green", "purple")) %>%
-  dyLegend(width = 500)
-```
-
-.center.tiny[Simulation of physiological measures (5s) including Heart Rate (HR), Breathing Rate (BR), Skin Temperature (ST) and Skin Conductance Level (SCL). All measures are centred and scaled.]
-
-```{r, fig.width=12, fig.height=2}
-data_physio %>% 
-  fortify.zoo() %>% 
-  pivot_longer(-Index, names_to = "measure", values_to = "value") %>% 
-  mutate(Index = as.numeric(Index)) %>% 
-  gam(
-    formula = value ~ s(Index), 
-    data = .,  
-    method = "REML", 
-    correlation = corAR1()
-  ) %>% 
-  draw()
-```
-
-.center.tiny[Underlying trend behind the multivariate changes identified with a Generalized Additive Model and potentially contributing to changes in Arousal/Activation.]
-
----
-
-# Example of Emotional Trends
-
-Multivariate physiological analysis of emotions during a mountain biking experience ([Dupré, Bland, Bolster, Morrison, & McKeown, 2017](https://doi.org/10.1007/978-3-319-60822-8_4))
-
-```{r eval=params$eval_rights}
-tags$video(
-  controls = "true",
-  src = "../../../Media/mountain_bike_emotion.mp4", 
-  type = "video/mp4", 
-  width = "400",
-  height = "400",
-  style = "display:block; margin: 0 auto;"
-  )
-```
 
 ---
 class: inverse, mline, center, middle
@@ -627,7 +452,7 @@ Face recognition depends on:
 ```{r out.width='100%'}
 include_graphics("media/interstellar_affdex.gif")
 ```
-.center.tiny[Interstellar by Affdex. Credit: Affectiva [`r emo::ji("link")`](https://www.youtube.com/watch?v=NsmAldoVwDs)]
+.center.tiny[Interstellar by Affdex. Credit: Affectiva [`r ji("link")`](https://www.youtube.com/watch?v=NsmAldoVwDs)]
 
 ]
 
@@ -644,7 +469,7 @@ Physiological measures are sensitive to:
 ```{r out.width='100%'}
 include_graphics("media/heart_rate_pepper.gif")
 ```
-.center.tiny[Credit: Techoob.com [`r emo::ji("link")`](https://www.youtube.com/watch?v=x2YF8a0SoNU)]
+.center.tiny[Credit: Techoob.com [`r ji("link")`](https://www.youtube.com/watch?v=x2YF8a0SoNU)]
 
 ]
 
@@ -717,7 +542,7 @@ As a result, automatic classifiers cannot recognize the diversity of facial expr
 ```{r out.width='100%'}
 include_graphics("media/six_basic_emotion.jpg")
 ```
-.center.tiny[Credit: Ekman, Friesen, & Hager (2002) [`r emo::ji("link")`](https://www.paulekman.com/facial-action-coding-system/)]
+.center.tiny[Credit: Ekman, Friesen, & Hager (2002) [`r ji("link")`](https://www.paulekman.com/facial-action-coding-system/)]
 ]
 
 ---
@@ -743,7 +568,7 @@ For both facial expressions and physiological changes, whereas some similar patt
 tags$video(
   controls = "true",
   muted = "true",
-  src = "../../../Media/dynemo_fear_montage.mp4", 
+  src = "../../../Media/emotions/dynemo_fear_montage.mp4", 
   type = "video/mp4",
   width = "400",
   height = "400",
@@ -799,7 +624,7 @@ Therefore, **should we use these automatic classifiers?**
 ```{r out.width='80%'}
 include_graphics("media/ai_now.png")
 ```
-.center.tiny[Credit: Tech Xplore (2019) [`r emo::ji("link")`](https://techxplore.com/news/2019-12-ai-watchdogs-rips-emotion-tech.html)]
+.center.tiny[Credit: Tech Xplore (2019) [`r ji("link")`](https://techxplore.com/news/2019-12-ai-watchdogs-rips-emotion-tech.html)]
 ]
 
 > *"Regulators should ban the use of affect recognition in important decisions that impact people's lives and access to opportunities. Until then, AI companies should stop deploying it."* - [AI Now Institute (2019)](https://ainowinstitute.org/AI_Now_2019_Report.html)
