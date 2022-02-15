@@ -190,13 +190,13 @@ Emotions have 5 functions each corresponding to a specific component/subsystem:
 
 # Developement of Affective Computing
 
-Despite the usefulness of the Component Process Model, research on emotions have lead to a "conceptual and definitional chaos" ([Buck, 1990, p. 330](https://doi.org/10.1207/s15327965pli0104_15)):
+Despite the usefulness of the Component Process Model, research on emotions have lead to a "**conceptual and definitional chaos**" ([Buck, 1990, p. 330](https://doi.org/10.1207/s15327965pli0104_15)):
 
 * There is still no consensual agreement between researchers
 * Some assumptions of the broad audience are not supported by scientific evidences
 
 .pull-left[
-In parallel, multiple tools and databases have been developed to investigate emotions. With the **increase in computer processing power** and the **development of machine learning algorithm**, computer scientists have created models to automatically recognize emotions... 
+In parallel, multiple tools and databases have been developed to investigate emotions. With the **increase in computer processing power** and the **development of machine learning algorithm**, computer scientists have created models to automatically recognize emotions... also called Emotion AI or Affective Computing.
 
 **What Could Possibly Go Wrong?**
 ]
@@ -216,8 +216,8 @@ class: inverse, mline, center, middle
 # Current Methods
 
 ![:col_header Type, Measure, Tool]
-![:col_row Invasive, Electric Activity of Face Muscles, Facial Electromyography (fEMG)]
 ![:col_row Non-Invasive, Human Observer Visual Recognition, Manual Annotation Software]
+![:col_row Invasive, Electric Activity of Face Muscles, Facial Electromyography (fEMG)]
 ![:col_row Non-Invasive, Landmark Spatial Configuration, Automatic Recognition Classifiers]
 
 &lt;img src="media/affectiva.jpg" width="75%" style="display: block; margin: auto;" /&gt;
@@ -233,6 +233,8 @@ Development of the technology:
 * Numerous academic systems since (see revue by [Zeng, Pantic, Roisman, &amp; Huang, 2009]())
 * VicarVision to develop the first commercial automatic classifier ([den Uyl &amp; van Kuilenburg, 2005](http://www.vicarvision.nl/pub/fc_denuyl_and_vankuilenburg_2005.pdf))
 * Today more than 20 companies for applications to automotive, sport, health, human resources, security or marketing purposes ([Dupré, Andelic, Morrison, &amp; McKeown, 2018](https://doi.org/10.1109/PERCOMW.2018.8480127))
+
+--
 
 .pull-left[
 A process in 3 steps:
@@ -277,7 +279,7 @@ Emotion categories/dimensions are inferred from facial expressions either:
 
 # Example of Automatic Recognition (1)
 
-Four video clips expressed by males were taken from the [DynEmo database](https://dynemo.univ-grenoble-alpes.fr/?lang=en) and judged by human observers as expressing happiness, surprise, fear and disgust:
+Four video clips expressed by males were taken from the [DynEmo database (Tcherkassof et al., 2013)](https://dynemo.univ-grenoble-alpes.fr/?lang=en) and judged by human observers as expressing happiness, surprise, fear and disgust:
 
 &lt;img src="../../../Media/emotions/dynemo_disgust_m.gif" width="25%" /&gt;&lt;img src="../../../Media/emotions/dynemo_fear_m.gif" width="25%" /&gt;&lt;img src="../../../Media/emotions/dynemo_happiness_m.gif" width="25%" /&gt;&lt;img src="../../../Media/emotions/dynemo_surprise_m.gif" width="25%" /&gt;
 
@@ -289,7 +291,7 @@ Four video clips expressed by males were taken from the [DynEmo database](https:
 
 # Example of Automatic Recognition (2)
 
-Four video clips expressed by females were taken from the [DynEmo database](https://dynemo.univ-grenoble-alpes.fr/?lang=en) and judged by human observers as expressing happiness, surprise, fear and disgust:
+Four video clips expressed by females were taken from the [DynEmo database (Tcherkassof et al., 2013)](https://dynemo.univ-grenoble-alpes.fr/?lang=en) and judged by human observers as expressing happiness, surprise, fear and disgust:
 
 &lt;img src="../../../Media/emotions/dynemo_disgust_f.gif" width="25%" /&gt;&lt;img src="../../../Media/emotions/dynemo_fear_f.gif" width="25%" /&gt;&lt;img src="../../../Media/emotions/dynemo_happiness_f.gif" width="25%" /&gt;&lt;img src="../../../Media/emotions/dynemo_surprise_f.gif" width="25%" /&gt;
 
@@ -300,20 +302,96 @@ Four video clips expressed by females were taken from the [DynEmo database](http
 ---
 class: inverse, mline, center, middle
 
-# 3. Current Challenges
+# 3. Technology Applications
+
+---
+
+# Marketing Reseach/Testing
+
+To overcome **Responds Bias** of participants in opinion or satisfaction survey, Emotion Recognition has been found as **fast** and **objective** tool in marketing research/testing (i.e., product testing, interface testing, advertisement and media impact)
+
+--
+
+Experimental platforms and suite of software are massively used by universities and organisations:
+ - [FaceReader software](https://www.noldus.com/facereader) created by VicarVision and distributed by Noldus
+ - [iMotions](https://imotions.com/) software platform using [Affectiva](https://www.affectiva.com/) algorithm
+ - Companies specialised in subcontracting Ads/Media testing (e.g., [Real Eyes](https://www.realeyesit.com/))
+
+--
+
+&lt;img src="media/realeyes_emotional_engagement.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+.center.tiny[Emotional Engagement Measure for Two TV Ads. Credit: Real Eyes [🔗](https://www.slideshare.net/realeyes-slides/the-importance-of-emotional-engagement)]
+
+---
+
+# Monitoring Interactions
+
+--
+
+## Human-Human Interactions
+
+Evaluating how emotions are displayed in face to face interactions is critical for many:
+
+- Measuring/Predicting customer reactions
+- Monitoring staff responses to customers (e.g., "quality training", "smart" recruitment)
+- Security/Police interrogations (see report on [China’s emotion recognition market by Article 19](https://www.article19.org/wp-content/uploads/2021/01/ER-Tech-China-Report.pdf))
+
+--
+
+## Human-Computer/Machine Interactions
+
+.pull-left[
+The largest market for emotion AI:
+
+- Part of the integration plan for most Automotive OEM and Tier 1 companies (e.g., [Acquisition of Affectiva and iMotions by Smart Eyes in 2021](https://techcrunch.com/2021/05/25/emotion-detection-software-startup-affectiva-acquired-for-73-5m))
+- Necessity to enhance robots and virtual interactions (e.g., [Metaverse](https://venturebeat.com/2022/01/26/the-ethics-of-the-metaverse-2/))
+]
+
+.pull-right[
+&lt;img src="media/affectiva_tracking.png" width="75%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Population Surveillance
+
+Face Recognition, which is using similar techniques, is already widely used across the world for security purposes in streets and other public spaces.
+
+Emotion AI is already being implemented in [China](https://www.theguardian.com/global-development/2021/mar/03/china-positive-energy-emotion-surveillance-recognition-tech) and [India](https://timesofindia.indiatimes.com/city/lucknow/smart-cams-to-read-expressions-of-women-in-distress-alert-cops/articleshow/80375401.cms) for similar purposes.
+
+&lt;img src="https://i.guim.co.uk/img/media/603e1335826ac8b5a43d674b2bd323317ce372b5/0_0_2727_1817/master/2727.jpg?width=445&amp;quality=45&amp;auto=format&amp;fit=max&amp;dpr=2&amp;s=c263eaf0eb29e93b7a43a228bd494530" width="70%" style="display: block; margin: auto;" /&gt;
+
+.center.tiny[Children pass cameras in Akto, near Kashgar, Xinjiang, where China’s Uighurs face intense surveillance. Photograph: Greg Baker/AFP/Getty]
+
+---
+class: inverse, mline, center, middle
+
+# 4. Current Challenges
 
 ---
 class: title-slide, middle
 
-## 3.1 Accuracy of Sensors
+## 4.1 Accuracy of Sensors
 
 ---
 
 # Sensors in a Specific Context
 
-Sensors are designed to measure facial expression or physiology in a controlled laboratory setting.
+.pull-left[
+
+Per definition, sensors always makes measurement errors.
+
+Plus, sensors are usually designed in a controlled laboratory setting.
 
 They may not be accurate once applied to the real world or to different context.
+]
+
+.pull-right[
+&lt;img src="media/heart_rate_pepper.gif" width="100%" style="display: block; margin: auto;" /&gt;
+.center.tiny[Credit: Techoob.com [🔗](https://www.youtube.com/watch?v=x2YF8a0SoNU)]
+
+]
 
 --
 
@@ -325,47 +403,37 @@ Face recognition depends on:
 - Context light
 - Morphological facial configurations
 ]
-
-&lt;img src="media/interstellar_affdex.gif" width="100%" style="display: block; margin: auto;" /&gt;
-.center.tiny[Interstellar by Affdex. Credit: Affectiva [🔗](https://www.youtube.com/watch?v=NsmAldoVwDs)]
-
 ]
-
---
 
 .pull-right[
-Physiological measures are sensitive to:
-.small[
-- Vibrations
-- Correct positioning
-- Singular genetic predispositions (e.g., morphology, sudation level, situs inversus)
-]
-
-&lt;img src="media/heart_rate_pepper.gif" width="100%" style="display: block; margin: auto;" /&gt;
-.center.tiny[Credit: Techoob.com [🔗](https://www.youtube.com/watch?v=x2YF8a0SoNU)]
-
+&lt;img src="media/interstellar_affdex.gif" width="100%" style="display: block; margin: auto;" /&gt;
+.center.tiny[Interstellar by Affdex. Credit: Affectiva [🔗](https://www.youtube.com/watch?v=NsmAldoVwDs)]
 ]
 
 ---
 
 # No Accuracy Standard
 
-The precision of devices is not monitored and no standard provides safe guards to users:
-
 .pull-left[
-* Academic benchmarks (e.g., [Bent, Goldstein, Kibbe, &amp; Dunn, 2020](https://doi.org/10.1038/s41746-020-0226-6)) are used to support legal class-actions over misled consumers on the ability of accurately monitoring physiological changes ([Sawyer, 2019](https://doi.org/10.1080/07303084.2019.1649563))
 
-* According a benchmark of 8 commercially available systems, the accuracy of automatic classifiers of facial expressions varies between 48% and 62% ([Dupré, Krumhuber, Küster, &amp; McKeown, 2020](https://doi.org/10.1371/journal.pone.0231968))
+The precision of devices is not monitored and no standard provides safe guards to users.
+
+According a benchmark of 8 commercially available systems, the accuracy of automatic classifiers of facial expressions varies between 48% and 62% ([Dupré, Krumhuber, Küster, &amp; McKeown, 2020](https://doi.org/10.1371/journal.pone.0231968))
+
 ]
 
 .pull-right[
-&lt;img src="media/tweet_ai__tech.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="media/tweet_ai__tech.png" width="80%" style="display: block; margin: auto;" /&gt;
 ]
+
+&gt; In this study, eight commercially available algorithms were compared with human observers in the recognition of 937 videos supposedly expressing an emotion. There was considerable variance in recognition accuracy among the eight algorithms, and their classification accuracy was consistently lower than the observers’ accuracy.
+
+The accuracy is different according to the type of emotion as well ([Dupré, 2021](https://ieeexplore.ieee.org/document/9430999))
 
 ---
 class: title-slide, middle
 
-## 3.2 Bias in Training Databases
+## 4.2 Bias in Training Databases
 
 ---
 
@@ -422,7 +490,7 @@ Examples of athletes' victory (e.g., raging or crying after wining; see [Martine
 
 # Inter-Individual Differences
 
-For both facial expressions and physiological changes, whereas some similar patterns can be found, there is a important variability of possible responses to a same trigger event
+For both facial expressions and physiological changes, whereas some similar patterns can be found, there is a important variability of possible responses to a same trigger event (see [Tcherkassof and Dupré, 2020](https://link.springer.com/article/10.1007/s00426-020-01448-4))
 
 <video controls="true" muted="true" src="../../../Media/emotions/dynemo_fear_montage.mp4" type="video/mp4" width="400" height="400" style="display:block; margin: 0 auto;"></video>
 
@@ -444,17 +512,17 @@ Despite the development of automatic classifiers on the idea that emotional cate
 ---
 class: title-slide, middle
 
-## 3.3 Ethical Considerations
+## 4.3 Ethical Considerations
 
 ---
 
 # Current Challenges
 
-With regard to what has been said, we have two problems here, and data/emotion privacy is not one of them:
-
 .pull-left[
 
-1. Physiological and expressive measures are prone to errors
+With regard to what has been said, we have two problems here, and data/emotion privacy is not one of them:
+
+1. Expressive measures are prone to errors
 
 2. Models used by automatic classifiers to categorise emotions are not reliable
 
@@ -467,6 +535,8 @@ Therefore, **should we use these automatic classifiers?**
 .center.tiny[Credit: Tech Xplore (2019) [🔗](https://techxplore.com/news/2019-12-ai-watchdogs-rips-emotion-tech.html)]
 ]
 
+--
+
 &gt; *"Regulators should ban the use of affect recognition in important decisions that impact people's lives and access to opportunities. Until then, AI companies should stop deploying it."* - [AI Now Institute (2019)](https://ainowinstitute.org/AI_Now_2019_Report.html)
 
 ---
@@ -478,8 +548,10 @@ Most of automatic classifiers of facial expressions have already moved from a cl
 * More reliable scientific evidences for a dimensional perspective
 * Not restricted to specific patterns
 
+--
+
 .pull-left[
-Additionally, errors in face and physiological measures are reducing with improved techniques and materials.
+Additionally, errors in facial expression recognition are reducing with improved techniques and materials.
 
 &gt; *"All models are wrong, but some are useful"* - [Box (1979)](https://doi.org/10.1016/B978-0-12-438150-6.50018-2)
 
