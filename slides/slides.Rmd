@@ -716,8 +716,6 @@ Most of automatic classifiers of facial expressions have already moved from a cl
 * More reliable scientific evidences for a dimensional perspective
 * Not restricted to specific patterns
 
---
-
 .pull-left[
 Additionally, errors in facial expression recognition are reducing with improved techniques and materials.
 
@@ -726,15 +724,9 @@ Additionally, errors in facial expression recognition are reducing with improved
 ]
 .pull-right[
 ```{r out.width='100%'}
-# tweetrmd::tweet_screenshot(
-#   tweetrmd::tweet_url("DigitalTrends", "1184388139395108864"),
-#   maxwidth = 400,
-#   hide_media = FALSE,
-#   theme = "dark"
-#   )
-
-include_graphics("media/tweet_digitaltrends.png")
+include_graphics("media/dim_emotion.gif")
 ```
+.center.tiny[Grey's Anatomy with a dimensional model [`r ji("link")`](https://www.youtube.com/watch?v=qGJovaGizHk)]
 ]
 
 ---
